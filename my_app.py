@@ -24,7 +24,7 @@ class MainWin(QWidget):
         self.setWindowTitle(txt_title)
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
-        pass
+        
     def initUI(self): 
         self.hello_text = QLabel( txt_hello )
         self.instruction = QLabel( txt_instruction )
@@ -34,10 +34,9 @@ class MainWin(QWidget):
         self.instruction.addWidget(self.layout)
         self.button.addWidget(self.layout)
 
-        pass
     def connects(self): 
         self.bnt_next.clicked.connect( self.next_click )
-        pass
+        
     def next_click(self):
         self.hide()
         self.tw = TestWin()
